@@ -51,6 +51,10 @@ group :development, :test do
     gem 'guard-minitest', '2.3.1'
   end
 
+  group :production do
+    gem 'rails_12factor', '0.0.2'
+    gem 'unicorn',        '4.8.3'
+  end  
 end
 
 
