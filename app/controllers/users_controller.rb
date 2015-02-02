@@ -14,6 +14,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find_by(params[:id])
+    if @user.update_attributes(user_params)
+      # updated successfully
+    else
+      render 'edit'
+    end
+  end
+
   def index
     @users = User.all
   end

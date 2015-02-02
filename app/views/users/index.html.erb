@@ -1,0 +1,5 @@
+<% provide(:title, "All Users") %>
+<% for user in @users %>
+  Name: <%= user.name %><br />
+  Email: <%= user.email %>
+<% end %>
