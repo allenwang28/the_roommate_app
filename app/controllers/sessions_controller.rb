@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       # Log in 
       log_in(user)
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else 
       # create error message
       flash.now[:danger] = "Log-in invalid."
