@@ -1,0 +1,14 @@
+<h1>The Roommate App</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Thanks for signing up on the Roommate App! Click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+
+<p>
+<small>This email was sent to <%= @user.email %>. Is this a mistake? </small>
+</p>
